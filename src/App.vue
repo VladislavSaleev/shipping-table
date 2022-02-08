@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <SupplyTable />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import SupplyTable from "@/components/SupplyTable";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    SupplyTable,
+  },
+};
 </script>
 
 <style lang="scss">
@@ -24,5 +24,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 </style>
